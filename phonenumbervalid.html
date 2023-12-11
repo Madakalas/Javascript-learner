@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            username validation
+        </title>
+        <script>
+            function myfun()
+            {
+                var up =/^[a-zA-Z]+$/.test(a)
+                var pp=/^[7-9]{1}{0-9}{9}$/.test(b)
+                var a =document.getElementById("user_name").value
+                var b = document.getElementById("phone-number").value
+            if(up==false)
+        {
+            document.getElementById("Message").innerHTML="Invalid pattern"
+        }  
+        if(pp=false)
+        {
+            document.getElementById("Message").innerHTML="Invalid phone number"
+            return false
+        }         
+        return false
+        if(pp=false)
+        {
+            document.getElementById("Message").innerHTML="INVALID PHONE NUMBER"
+        }
+    }
+        </script>
+    </head>
+    <body style="background-color: white">
+        <div id="val">
+        <form onsubmit="return myfun()">
+            username:
+            <input type="text" id="user_name">
+            <span id="Message"></span>
+            <br><br>
+            <input type="submit" value="submit" style="font-size:medium">
+            <br><br>
+            phonenumber:
+            <input type="text" id="user_name" placeholder=""EG:123456789>
+            <span id="Message1"></span>
+            <br><br>
+            <input type="submit" value="submit" style="font-size:medium">
+        </form>
+        </div>
+        <style>
+            #val
+            {
+                border: 2px solid rgb(245, 240, 240);
+                background-color: rgb(222, 222, 214);
+                font-size: medium;
+                font-family: fantasy;
+                margin: 9%;
+                padding-top:60px
+            }
+        </style>
+    </body>
+</html>
