@@ -1,32 +1,24 @@
-/* intiating methods + functions*/
-class One{
-    acc_Amount=0;
+class Account{
     acc_Name;
-    acc_Id;
-
-
-    open_Account(){
-        console.log("Account openesd successfully")
-    }
-    deposit_Amount(){
-        console.log("Amount should deposited successfully")
+    acc_Email;
+    constructor(name,email){
+        this.acc_Email=email;
+        this.acc_Name=name;
 
     }
-    withdrawl(){
-        console.log("Insufficient to withdrawl")
-    }
-    get_Balance(amount){
-        this.acc_Amount=this.acc_Amount+amount;
-        
-    }
-    close_Account(){
-        console.log("Account closed succesfully")
-    }
+
+
 }
-let a = new One;
-a.open_Account();
-a.deposit_Amount();
-a.withdrawl();
-a.get_Balance(5000);
-a.close_Account();
+class SA extends Account{
+    acc_Id;
+    acc_amount;
+    constructor(id,name,email,amount){
+        super(name,email)
 
+        this.acc_Id=id;
+        this.acc_amount=amount;
+    }
+
+}
+let s=new SA(101,'Rajan','Rajan@gmail.com', 56000)
+console.log(s)
